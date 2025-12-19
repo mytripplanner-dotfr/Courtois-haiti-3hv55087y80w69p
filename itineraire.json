@@ -1,0 +1,409 @@
+{
+  "pays": "Haïti",
+  "drapeau": "🇭🇹",
+  "symbole": "🌴",
+  "titre": "L'Éclat Caché d'Haïti: Aventure à Courtois",
+  "budget_total": "€3150",
+  "duree": "13 jours",
+  "date_debut": "2026-01-17",
+  "date_fin": "2026-01-30",
+  "temps_vol": "7h avec escale depuis Martin, États-Unis",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Port-au-Prince et Détente à Léogâne",
+      "legende": "Après un vol international, la première journée est dédiée à une transition douce. Vous atterrirez à Port-au-Prince, la capitale vibrante, avant de vous diriger vers Léogâne, une ville côtière chargée d'histoire. L'objectif est de s'installer tranquillement, de se reposer et de s'imprégner des premières impressions haïtiennes sans précipitation. Profitez de l'ambiance locale et de la brise marine pour commencer votre aventure.",
+      "lieu": "Léogâne",
+      "activites": [
+        "🛬 <strong>Arrivée à Port-au-Prince</strong>: Atterrissage à l'aéroport international Toussaint Louverture (PAP) et rencontre avec votre chauffeur privé pour le transfert.",
+        "🚗 <strong>Transfert vers Léogâne</strong>: Un trajet d'environ 1h30 vous mènera à Léogâne, une ville historique située à l'ouest de la capitale, pour une installation en douceur.",
+        "🚶‍♂️ <strong>Balade légère en bord de mer</strong>: Profitez d'une promenade relaxante le long de la côte de Léogâne pour vous dégourdir les jambes et admirer le coucher de soleil."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le trajet de l'aéroport à Léogâne offre un premier aperçu des paysages haïtiens. Prévoyez de l'eau et des snacks pour le voyage."
+        },
+        {
+          "symbole": "💱",
+          "titre": "Monnaie locale",
+          "texte": "La monnaie est la Gourde haïtienne (HTG). Il est conseillé d'avoir quelques petites coupures pour les dépenses quotidiennes."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🛣️",
+      "titre": "Route vers le Sud et Immersion à Courtois",
+      "legende": "Aujourd'hui marque le début de votre exploration du sud d'Haïti, une région réputée pour sa beauté naturelle et son authenticité. Vous prendrez la route vers Courtois, une localité paisible qui servira de base pour les prochains jours. Le voyage sera l'occasion d'observer les paysages changeants, des plaines fertiles aux collines verdoyantes. L'installation à Courtois vous permettra de vous connecter avec la vie rurale haïtienne.",
+      "lieu": "Courtois (près des Cayes)",
+      "activites": [
+        "🚗 <strong>Voyage vers le Sud</strong>: Départ de Léogâne pour un trajet d'environ 4-5 heures vers la région de Courtois, près des Cayes, en traversant des paysages pittoresques.",
+        "🛏️ <strong>Installation à l'hôtel</strong>: Arrivée et installation dans votre hébergement à Courtois ou dans une ville voisine comme Les Cayes, offrant un confort 3 étoiles.",
+        "🚶‍♀️ <strong>Découverte des environs immédiats</strong>: Une courte balade autour de votre hôtel pour vous familiariser avec l'environnement local et l'ambiance paisible."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Conseil de route",
+          "texte": "Les routes peuvent être cahoteuses par endroits. Prévoyez des pauses régulières et admirez les vues."
+        },
+        {
+          "symbole": "🗣️",
+          "titre": "Langue",
+          "texte": "Le créole haïtien est la langue principale. Quelques mots de base seront très appréciés par les habitants."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏖️",
+      "titre": "Plage de Gelée et Saveurs Locales",
+      "legende": "La journée est consacrée à la détente et à la découverte des plaisirs balnéaires du sud. La plage de Gelée, près des Cayes, est l'une des plus célèbres d'Haïti, connue pour son sable fin et ses eaux calmes. C'est l'endroit idéal pour se relaxer, nager et goûter aux spécialités culinaires locales, notamment les fruits de mer frais. Une immersion totale dans l'art de vivre caribéen vous attend.",
+      "lieu": "Les Cayes",
+      "activites": [
+        "🏖️ <strong>Détente à la Plage de Gelée</strong>: Profitez de la matinée pour vous baigner, bronzer et vous détendre sur cette magnifique plage publique, très appréciée des locaux.",
+        "🍽️ <strong>Déjeuner de fruits de mer frais</strong>: Savourez un délicieux déjeuner dans l'un des petits restaurants en bord de mer, proposant des poissons et fruits de mer fraîchement pêchés.",
+        "🚶‍♂️ <strong>Promenade le long du rivage</strong>: Une balade digestive pour admirer le paysage côtier et observer la vie locale animée autour de la plage."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil des Caraïbes est intense. N'oubliez pas votre crème solaire, un chapeau et des lunettes de soleil."
+        },
+        {
+          "symbole": "🐠",
+          "titre": "Gastronomie",
+          "texte": "Goûtez au \"lambi\" (conque) ou au \"griyo\" (porc frit), des spécialités haïtiennes incontournables."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏞️",
+      "titre": "Aventure à Saut-Mathurine et Nature luxuriante",
+      "legende": "Préparez-vous pour une journée d'aventure au cœur de la nature haïtienne. Saut-Mathurine, la plus grande cascade d'Haïti, est une merveille naturelle à ne pas manquer. Le site offre un cadre idyllique pour la baignade dans ses eaux rafraîchissantes et la contemplation de la flore environnante. C'est une escapade parfaite pour se ressourcer et apprécier la biodiversité de l'île.",
+      "lieu": "Camp-Perrin",
+      "activites": [
+        "💧 <strong>Visite de Saut-Mathurine</strong>: Randonnée facile jusqu'à la majestueuse cascade de Saut-Mathurine, où vous pourrez vous baigner dans ses bassins naturels.",
+        "🧺 <strong>Pique-nique au bord de la cascade</strong>: Profitez d'un déjeuner en pleine nature, avec le son apaisant de l'eau en toile de fond.",
+        "🌿 <strong>Exploration des sentiers environnants</strong>: Une courte promenade pour découvrir la végétation luxuriante et la faune locale autour du site."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Équipement",
+          "texte": "Portez des chaussures confortables et antidérapantes pour la marche et n'oubliez pas votre maillot de bain."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Le cadre est magnifique, mais protégez votre appareil photo de l'humidité près de la cascade."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🏛️",
+      "titre": "Histoire et Culture aux Cayes",
+      "legende": "Cette journée est dédiée à l'exploration de Les Cayes, l'une des villes les plus importantes du sud d'Haïti. Vous plongerez dans son histoire riche, marquée par des événements clés de l'indépendance haïtienne. La visite du centre-ville et de ses monuments vous offrira un aperçu de l'architecture coloniale et de la vie quotidienne. C'est une occasion d'apprécier le patrimoine culturel de la région.",
+      "lieu": "Les Cayes",
+      "activites": [
+        "🚶‍♀️ <strong>Découverte du centre-ville des Cayes</strong>: Flânez dans les rues animées, admirez l'architecture coloniale et ressentez le pouls de la ville.",
+        "⛪ <strong>Visite de la Cathédrale Notre-Dame de l'Assomption</strong>: Explorez ce monument historique et architectural, témoin de la foi et de l'histoire locale.",
+        "🛍️ <strong>Marché public des Cayes</strong>: Imprégnez-vous de l'ambiance colorée et vibrante du marché, où vous pourrez trouver des produits locaux et de l'artisanat."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Contexte historique",
+          "texte": "Les Cayes a joué un rôle crucial dans l'histoire d'Haïti, notamment en tant que point de départ de l'expédition de Simón Bolívar."
+        },
+        {
+          "symbole": "🤝",
+          "titre": "Interaction",
+          "texte": "N'hésitez pas à interagir avec les vendeurs du marché, ils sont souvent très accueillants."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🦇",
+      "titre": "Mystères de la Grotte Marie Jeanne",
+      "legende": "Aujourd'hui, l'aventure vous mène sous terre, à la découverte de la Grotte Marie Jeanne, un site spéléologique impressionnant. Cette grotte, l'une des plus grandes des Caraïbes, abrite des formations rocheuses spectaculaires et une faune unique. C'est une expérience fascinante qui révèle une autre facette de la richesse naturelle d'Haïti, loin des sentiers battus. Préparez-vous à être émerveillé par ce monde souterrain.",
+      "lieu": "Port-à-Piment",
+      "activites": [
+        "🔦 <strong>Exploration de la Grotte Marie Jeanne</strong>: Visite guidée de cette immense grotte, avec ses stalactites, stalagmites et ses chambres impressionnantes.",
+        "🚶‍♂️ <strong>Randonnée légère aux alentours</strong>: Après la grotte, profitez d'une petite marche dans la campagne environnante pour apprécier la tranquillité du lieu.",
+        "🍽️ <strong>Dégustation de cuisine locale</strong>: Déjeuner dans un petit restaurant de Port-à-Piment, pour savourer des plats typiques de la région."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🔦",
+          "titre": "Préparation",
+          "texte": "Une lampe frontale est recommandée, bien que des guides équipés soient souvent disponibles. Les chaussures fermées sont indispensables."
+        },
+        {
+          "symbole": "🌡️",
+          "titre": "Température",
+          "texte": "La température à l'intérieur de la grotte est constante et fraîche, prévoyez une petite veste légère."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🧘‍♀️",
+      "titre": "Journée Libre et Détente à Courtois",
+      "legende": "Après plusieurs jours d'exploration intense, cette journée est dédiée à la détente et à la liberté. Vous pourrez choisir de vous reposer à l'hôtel, de vous promener tranquillement dans les environs de Courtois, ou de revisiter un lieu qui vous a particulièrement plu. C'est l'occasion de s'imprégner davantage de l'atmosphère locale, de lire un livre ou simplement de profiter du calme. Laissez-vous porter par le rythme haïtien.",
+      "lieu": "Courtois",
+      "activites": [
+        "😴 <strong>Matinée de repos</strong>: Profitez d'une grasse matinée et d'un petit-déjeuner tranquille à l'hôtel.",
+        "🚶‍♀️ <strong>Balade exploratoire personnelle</strong>: Explorez les chemins et les villages autour de Courtois à votre rythme, en observant la vie quotidienne.",
+        "🍹 <strong>Détente à l'hôtel</strong>: Profitez des installations de votre hôtel, que ce soit la piscine (si disponible) ou un coin lecture paisible."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "📖",
+          "titre": "Lecture",
+          "texte": "C'est le moment idéal pour lire un livre sur l'histoire ou la culture haïtienne et approfondir vos connaissances."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Si vous croisez des artisans locaux, c'est une bonne occasion d'acheter des souvenirs authentiques."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🏝️",
+      "titre": "Excursion à l'Île-à-Vache",
+      "legende": "Aujourd'hui, embarquez pour une excursion inoubliable vers l'Île-à-Vache, un véritable joyau des Caraïbes. Cette île paradisiaque est réputée pour ses plages immaculées, ses eaux turquoise et son atmosphère paisible. Loin de l'agitation, vous pourrez vous adonner à la baignade, à la plongée avec tuba ou simplement vous détendre sous les cocotiers. Une journée de rêve vous attend dans ce havre de paix.",
+      "lieu": "Île-à-Vache",
+      "activites": [
+        "🚤 <strong>Traversée vers l'Île-à-Vache</strong>: Départ en bateau depuis Les Cayes pour une traversée d'environ 30-45 minutes vers l'île.",
+        "🏊‍♀️ <strong>Baignade et snorkeling</strong>: Profitez des eaux cristallines pour nager et explorer les fonds marins colorés de l'île.",
+        "🍽️ <strong>Déjeuner sur la plage</strong>: Savourez un déjeuner typique de poissons grillés sur l'une des plages idylliques de l'île."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🐠",
+          "titre": "Vie marine",
+          "texte": "L'Île-à-Vache est un excellent spot pour le snorkeling, avec une belle diversité de poissons tropicaux."
+        },
+        {
+          "symbole": "🎒",
+          "titre": "À emporter",
+          "texte": "N'oubliez pas votre serviette, maillot de bain, crème solaire et un sac étanche pour vos affaires."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🌳",
+      "titre": "Découverte de la Forêt des Pins",
+      "legende": "Échappez à la chaleur côtière pour une incursion dans les hauteurs d'Haïti, à la Forêt des Pins. Cette région montagneuse offre un contraste saisissant avec le littoral, avec ses forêts de pins et son climat plus frais. C'est une opportunité de découvrir une facette différente de la géographie haïtienne et de profiter de paysages verdoyants. Une bouffée d'air frais et de nature vous attend.",
+      "lieu": "Forêt des Pins (près de Kenscoff)",
+      "activites": [
+        "🚗 <strong>Excursion vers la Forêt des Pins</strong>: Un trajet pittoresque vous mènera vers cette région montagneuse, offrant des vues imprenables sur les paysages haïtiens.",
+        "🌲 <strong>Randonnée en forêt</strong>: Profitez d'une marche revigorante à travers les pins, appréciant l'air frais et la tranquillité de la nature.",
+        "☕ <strong>Pause café local</strong>: Dégustez un café haïtien fraîchement moulu dans un petit établissement local, réputé pour sa qualité."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "⛰️",
+          "titre": "Altitude",
+          "texte": "La Forêt des Pins est située en altitude, les températures peuvent y être plus fraîches qu'en bord de mer."
+        },
+        {
+          "symbole": "☕",
+          "titre": "Café haïtien",
+          "texte": "Haïti est producteur de café. Profitez-en pour goûter un café local, souvent biologique et de grande qualité."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🎨",
+      "titre": "Artisanat et Culture à Aquin",
+      "legende": "Aujourd'hui, explorez la ville d'Aquin, connue pour son artisanat et son ambiance authentique. C'est une occasion de rencontrer des artisans locaux, de découvrir leurs techniques traditionnelles et de trouver des souvenirs uniques. La ville offre également un aperçu de la vie quotidienne haïtienne, loin des circuits touristiques classiques. Une journée riche en découvertes culturelles et en rencontres humaines.",
+      "lieu": "Aquin",
+      "activites": [
+        "🛍️ <strong>Visite des ateliers d'artisans</strong>: Rencontrez des artisans locaux et découvrez leur travail, notamment la vannerie, la sculpture sur bois ou la peinture.",
+        "🚶‍♀️ <strong>Exploration du marché d'Aquin</strong>: Flânez dans le marché local pour observer les produits frais et l'animation quotidienne.",
+        "🍽️ <strong>Déjeuner typique haïtien</strong>: Savourez un repas dans un \"lakou\" (cour) ou un petit restaurant, pour une expérience culinaire authentique."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🤝",
+          "titre": "Soutien local",
+          "texte": "Acheter directement auprès des artisans est un excellent moyen de soutenir l'économie locale."
+        },
+        {
+          "symbole": " bargaining",
+          "titre": "Négociation",
+          "texte": "La négociation est courante sur les marchés, mais toujours avec respect et sourire."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🌅",
+      "titre": "Derniers Moments dans le Sud et Coucher de Soleil",
+      "legende": "Profitez de cette dernière journée complète dans le sud pour revisiter un lieu coup de cœur ou simplement vous imprégner de l'atmosphère. Que ce soit une dernière baignade, une promenade tranquille ou la dégustation d'un plat favori, cette journée est à votre guise. Le soir, un magnifique coucher de soleil sur la mer des Caraïbes offrira un adieu mémorable à cette région authentique d'Haïti. Une journée pour créer des souvenirs durables.",
+      "lieu": "Courtois / Les Cayes",
+      "activites": [
+        "🏖️ <strong>Matinée libre à la plage ou au village</strong>: Choisissez de retourner à la plage de Gelée ou de vous promener une dernière fois dans les environs de Courtois.",
+        "🍽️ <strong>Déjeuner d'adieu</strong>: Savourez un dernier repas dans un restaurant local, en appréciant les saveurs haïtiennes.",
+        "🌅 <strong>Coucher de soleil sur la côte</strong>: Trouvez un endroit idéal pour admirer le spectacle du soleil se couchant sur la mer des Caraïbes, un moment magique."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Souvenirs",
+          "texte": "Prenez quelques dernières photos pour immortaliser les paysages et les moments vécus."
+        },
+        {
+          "symbole": "🙏",
+          "titre": "Remerciements",
+          "texte": "Un simple \"Mèsi anpil\" (merci beaucoup) sera très apprécié par les habitants."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🌊",
+      "titre": "Retour vers Jacmel, la Cité Créative",
+      "legende": "Quittant le sud, vous prendrez la route vers l'est pour rejoindre Jacmel, une ville côtière réputée pour son architecture coloniale, son art et son carnaval. Ce changement de décor offre une nouvelle perspective sur la diversité d'Haïti. La journée sera consacrée au voyage et à une première immersion dans l'ambiance artistique de Jacmel, une ville pleine de charme et de créativité. Une transition douce avant le départ.",
+      "lieu": "Jacmel",
+      "activites": [
+        "🚗 <strong>Voyage vers Jacmel</strong>: Départ de Courtois/Les Cayes pour un trajet d'environ 4-5 heures vers Jacmel, sur la côte sud-est.",
+        "🛏️ <strong>Installation à l'hôtel à Jacmel</strong>: Arrivée et installation dans votre hébergement, un hôtel 3 étoiles au cœur de la ville.",
+        "🚶‍♀️ <strong>Première balade dans le centre historique</strong>: Une promenade légère pour découvrir les rues pavées et les maisons coloniales de Jacmel."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🎨",
+          "titre": "Jacmel, ville d'art",
+          "texte": "Jacmel est classée au patrimoine mondial de l'UNESCO pour son architecture et son dynamisme artistique."
+        },
+        {
+          "symbole": "🎭",
+          "titre": "Carnaval",
+          "texte": "Si vous revenez en février, ne manquez pas le célèbre carnaval de Jacmel, réputé pour ses masques et défilés."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🛫",
+      "titre": "Départ de Jacmel vers Port-au-Prince et Vol Retour",
+      "legende": "C'est le dernier jour de votre voyage en Haïti. Après un dernier petit-déjeuner à Jacmel, vous prendrez la route pour Port-au-Prince afin de rejoindre l'aéroport international. Ce trajet sera l'occasion de revoir une dernière fois les paysages haïtiens et de repenser aux merveilleux souvenirs créés. Votre vol retour vous attend, emportant avec vous l'éclat et la richesse de cette île unique. Un départ empreint de nostalgie et de gratitude.",
+      "lieu": "Port-au-Prince",
+      "activites": [
+        "🚗 <strong>Transfert Jacmel - Port-au-Prince</strong>: Un trajet d'environ 2-3 heures vous mènera de Jacmel à l'aéroport international Toussaint Louverture (PAP).",
+        "✈️ <strong>Formalités d'enregistrement</strong>: Enregistrement pour votre vol retour et passage des contrôles de sécurité.",
+        "🛫 <strong>Vol retour</strong>: Départ de Port-au-Prince, marquant la fin de votre aventure haïtienne."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Timing",
+          "texte": "Prévoyez suffisamment de temps pour le trajet vers l'aéroport et les formalités, surtout en cas de trafic."
+        },
+        {
+          "symbole": "🛂",
+          "titre": "Documents",
+          "texte": "Assurez-vous d'avoir votre passeport et vos documents de vol à portée de main."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "€750/pers (Vol aller-retour Martin, États-Unis - Port-au-Prince en classe économique)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "€520/pers (Transferts aéroport, location de voiture avec chauffeur ou transports locaux inter-villes)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "€455/pers (Repas dans des restaurants locaux et marchés, budget moyen pour 13 jours)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "€1020/pers (12 nuits en hôtels 3 étoiles, base chambre double)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "€390/pers (Entrées aux sites, excursions guidées, traversée Île-à-Vache)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de Décembre à Mars.",
+      "symbole": "🌴"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La population haïtienne est majoritairement jeune et très résiliente. Le créole haïtien est la langue nationale, le français est aussi parlé.",
+      "symbole": "👥"
+    },
+    {
+      "titre": "Haïti est le premier pays indépendant d'Amérique latine et des Caraïbes, et la seule nation issue d'une révolte d'esclaves réussie.",
+      "symbole": "🇭🇹"
+    },
+    {
+      "titre": "Le \"tap-tap\" est un moyen de transport public coloré et emblématique d'Haïti, souvent décoré d'œuvres d'art religieuses ou populaires.",
+      "symbole": "🚌"
+    },
+    {
+      "titre": "Le vaudou est une religion officielle en Haïti, pratiquée par une partie de la population, et fait partie intégrante de la culture et de l'identité haïtienne.",
+      "symbole": "✨"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme en Haïti",
+      "titre": "Ministère du Tourisme d'Haïti",
+      "url": "https://haititourisme.gouv.ht/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météorologiques pour Haïti",
+      "titre": "AccuWeather Haïti",
+      "url": "https://www.accuweather.com/fr/ht/haiti-weather",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Informations générales et culturelles sur Haïti",
+      "titre": "Wikipédia Haïti",
+      "url": "https://fr.wikipedia.org/wiki/Ha%C3%AFti",
+      "symbole": "🌐"
+    }
+  ]
+}
