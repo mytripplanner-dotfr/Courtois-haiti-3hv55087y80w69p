@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Éclat Caché d'Haïti: Aventure à Courtois </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Port-au-Prince et Détente à Léogâne</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Route vers le Sud et Immersion à Courtois</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Plage de Gelée et Saveurs Locales</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Aventure à Saut-Mathurine et Nature luxuriante</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Histoire et Culture aux Cayes</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Mystères de la Grotte Marie Jeanne</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Journée Libre et Détente à Courtois</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Excursion à l'Île-à-Vache</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Découverte de la Forêt des Pins</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Artisanat et Culture à Aquin</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Derniers Moments dans le Sud et Coucher de Soleil</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Retour vers Jacmel, la Cité Créative</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Départ de Jacmel vers Port-au-Prince et Vol Retour</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">COURTOIS- HAITI</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Éclat Caché d'Haïti: Aventure à Courtois</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 17 au 30 Janvier 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 €3150</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 7h avec escale depuis Martin, États-Unis</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Port-au-Prince et Détente à Léogâne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un vol international, la première journée est dédiée à une transition douce. Vous atterrirez à Port-au-Prince, la capitale vibrante, avant de vous diriger vers Léogâne, une ville côtière chargée d'histoire. L'objectif est de s'installer tranquillement, de se reposer et de s'imprégner des premières impressions haïtiennes sans précipitation. Profitez de l'ambiance locale et de la brise marine pour commencer votre aventure.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à Port-au-Prince</strong>: Atterrissage à l'aéroport international Toussaint Louverture (PAP) et rencontre avec votre chauffeur privé pour le transfert.</li><li>🚗 <strong>Transfert vers Léogâne</strong>: Un trajet d'environ 1h30 vous mènera à Léogâne, une ville historique située à l'ouest de la capitale, pour une installation en douceur.</li><li>🚶‍♂️ <strong>Balade légère en bord de mer</strong>: Profitez d'une promenade relaxante le long de la côte de Léogâne pour vous dégourdir les jambes et admirer le coucher de soleil.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le trajet de l'aéroport à Léogâne offre un premier aperçu des paysages haïtiens. Prévoyez de l'eau et des snacks pour le voyage.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💱 Monnaie locale</p>
+                                <p class="text-gray-700">La monnaie est la Gourde haïtienne (HTG). Il est conseillé d'avoir quelques petites coupures pour les dépenses quotidiennes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Route vers le Sud et Immersion à Courtois</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui marque le début de votre exploration du sud d'Haïti, une région réputée pour sa beauté naturelle et son authenticité. Vous prendrez la route vers Courtois, une localité paisible qui servira de base pour les prochains jours. Le voyage sera l'occasion d'observer les paysages changeants, des plaines fertiles aux collines verdoyantes. L'installation à Courtois vous permettra de vous connecter avec la vie rurale haïtienne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Voyage vers le Sud</strong>: Départ de Léogâne pour un trajet d'environ 4-5 heures vers la région de Courtois, près des Cayes, en traversant des paysages pittoresques.</li><li>🛏️ <strong>Installation à l'hôtel</strong>: Arrivée et installation dans votre hébergement à Courtois ou dans une ville voisine comme Les Cayes, offrant un confort 3 étoiles.</li><li>🚶‍♀️ <strong>Découverte des environs immédiats</strong>: Une courte balade autour de votre hôtel pour vous familiariser avec l'environnement local et l'ambiance paisible.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Conseil de route</p>
+                                <p class="text-gray-700">Les routes peuvent être cahoteuses par endroits. Prévoyez des pauses régulières et admirez les vues.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue</p>
+                                <p class="text-gray-700">Le créole haïtien est la langue principale. Quelques mots de base seront très appréciés par les habitants.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Plage de Gelée et Saveurs Locales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">La journée est consacrée à la détente et à la découverte des plaisirs balnéaires du sud. La plage de Gelée, près des Cayes, est l'une des plus célèbres d'Haïti, connue pour son sable fin et ses eaux calmes. C'est l'endroit idéal pour se relaxer, nager et goûter aux spécialités culinaires locales, notamment les fruits de mer frais. Une immersion totale dans l'art de vivre caribéen vous attend.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏖️ <strong>Détente à la Plage de Gelée</strong>: Profitez de la matinée pour vous baigner, bronzer et vous détendre sur cette magnifique plage publique, très appréciée des locaux.</li><li>🍽️ <strong>Déjeuner de fruits de mer frais</strong>: Savourez un délicieux déjeuner dans l'un des petits restaurants en bord de mer, proposant des poissons et fruits de mer fraîchement pêchés.</li><li>🚶‍♂️ <strong>Promenade le long du rivage</strong>: Une balade digestive pour admirer le paysage côtier et observer la vie locale animée autour de la plage.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le soleil des Caraïbes est intense. N'oubliez pas votre crème solaire, un chapeau et des lunettes de soleil.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐠 Gastronomie</p>
+                                <p class="text-gray-700">Goûtez au "lambi" (conque) ou au "griyo" (porc frit), des spécialités haïtiennes incontournables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure à Saut-Mathurine et Nature luxuriante</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Préparez-vous pour une journée d'aventure au cœur de la nature haïtienne. Saut-Mathurine, la plus grande cascade d'Haïti, est une merveille naturelle à ne pas manquer. Le site offre un cadre idyllique pour la baignade dans ses eaux rafraîchissantes et la contemplation de la flore environnante. C'est une escapade parfaite pour se ressourcer et apprécier la biodiversité de l'île.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>💧 <strong>Visite de Saut-Mathurine</strong>: Randonnée facile jusqu'à la majestueuse cascade de Saut-Mathurine, où vous pourrez vous baigner dans ses bassins naturels.</li><li>🧺 <strong>Pique-nique au bord de la cascade</strong>: Profitez d'un déjeuner en pleine nature, avec le son apaisant de l'eau en toile de fond.</li><li>🌿 <strong>Exploration des sentiers environnants</strong>: Une courte promenade pour découvrir la végétation luxuriante et la faune locale autour du site.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Équipement</p>
+                                <p class="text-gray-700">Portez des chaussures confortables et antidérapantes pour la marche et n'oubliez pas votre maillot de bain.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Le cadre est magnifique, mais protégez votre appareil photo de l'humidité près de la cascade.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Histoire et Culture aux Cayes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est dédiée à l'exploration de Les Cayes, l'une des villes les plus importantes du sud d'Haïti. Vous plongerez dans son histoire riche, marquée par des événements clés de l'indépendance haïtienne. La visite du centre-ville et de ses monuments vous offrira un aperçu de l'architecture coloniale et de la vie quotidienne. C'est une occasion d'apprécier le patrimoine culturel de la région.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚶‍♀️ <strong>Découverte du centre-ville des Cayes</strong>: Flânez dans les rues animées, admirez l'architecture coloniale et ressentez le pouls de la ville.</li><li>⛪ <strong>Visite de la Cathédrale Notre-Dame de l'Assomption</strong>: Explorez ce monument historique et architectural, témoin de la foi et de l'histoire locale.</li><li>🛍️ <strong>Marché public des Cayes</strong>: Imprégnez-vous de l'ambiance colorée et vibrante du marché, où vous pourrez trouver des produits locaux et de l'artisanat.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Contexte historique</p>
+                                <p class="text-gray-700">Les Cayes a joué un rôle crucial dans l'histoire d'Haïti, notamment en tant que point de départ de l'expédition de Simón Bolívar.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 Interaction</p>
+                                <p class="text-gray-700">N'hésitez pas à interagir avec les vendeurs du marché, ils sont souvent très accueillants.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Mystères de la Grotte Marie Jeanne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'aventure vous mène sous terre, à la découverte de la Grotte Marie Jeanne, un site spéléologique impressionnant. Cette grotte, l'une des plus grandes des Caraïbes, abrite des formations rocheuses spectaculaires et une faune unique. C'est une expérience fascinante qui révèle une autre facette de la richesse naturelle d'Haïti, loin des sentiers battus. Préparez-vous à être émerveillé par ce monde souterrain.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🔦 <strong>Exploration de la Grotte Marie Jeanne</strong>: Visite guidée de cette immense grotte, avec ses stalactites, stalagmites et ses chambres impressionnantes.</li><li>🚶‍♂️ <strong>Randonnée légère aux alentours</strong>: Après la grotte, profitez d'une petite marche dans la campagne environnante pour apprécier la tranquillité du lieu.</li><li>🍽️ <strong>Dégustation de cuisine locale</strong>: Déjeuner dans un petit restaurant de Port-à-Piment, pour savourer des plats typiques de la région.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🔦 Préparation</p>
+                                <p class="text-gray-700">Une lampe frontale est recommandée, bien que des guides équipés soient souvent disponibles. Les chaussures fermées sont indispensables.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌡️ Température</p>
+                                <p class="text-gray-700">La température à l'intérieur de la grotte est constante et fraîche, prévoyez une petite veste légère.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée Libre et Détente à Courtois</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après plusieurs jours d'exploration intense, cette journée est dédiée à la détente et à la liberté. Vous pourrez choisir de vous reposer à l'hôtel, de vous promener tranquillement dans les environs de Courtois, ou de revisiter un lieu qui vous a particulièrement plu. C'est l'occasion de s'imprégner davantage de l'atmosphère locale, de lire un livre ou simplement de profiter du calme. Laissez-vous porter par le rythme haïtien.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>😴 <strong>Matinée de repos</strong>: Profitez d'une grasse matinée et d'un petit-déjeuner tranquille à l'hôtel.</li><li>🚶‍♀️ <strong>Balade exploratoire personnelle</strong>: Explorez les chemins et les villages autour de Courtois à votre rythme, en observant la vie quotidienne.</li><li>🍹 <strong>Détente à l'hôtel</strong>: Profitez des installations de votre hôtel, que ce soit la piscine (si disponible) ou un coin lecture paisible.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📖 Lecture</p>
+                                <p class="text-gray-700">C'est le moment idéal pour lire un livre sur l'histoire ou la culture haïtienne et approfondir vos connaissances.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Si vous croisez des artisans locaux, c'est une bonne occasion d'acheter des souvenirs authentiques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion à l'Île-à-Vache</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, embarquez pour une excursion inoubliable vers l'Île-à-Vache, un véritable joyau des Caraïbes. Cette île paradisiaque est réputée pour ses plages immaculées, ses eaux turquoise et son atmosphère paisible. Loin de l'agitation, vous pourrez vous adonner à la baignade, à la plongée avec tuba ou simplement vous détendre sous les cocotiers. Une journée de rêve vous attend dans ce havre de paix.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚤 <strong>Traversée vers l'Île-à-Vache</strong>: Départ en bateau depuis Les Cayes pour une traversée d'environ 30-45 minutes vers l'île.</li><li>🏊‍♀️ <strong>Baignade et snorkeling</strong>: Profitez des eaux cristallines pour nager et explorer les fonds marins colorés de l'île.</li><li>🍽️ <strong>Déjeuner sur la plage</strong>: Savourez un déjeuner typique de poissons grillés sur l'une des plages idylliques de l'île.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐠 Vie marine</p>
+                                <p class="text-gray-700">L'Île-à-Vache est un excellent spot pour le snorkeling, avec une belle diversité de poissons tropicaux.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎒 À emporter</p>
+                                <p class="text-gray-700">N'oubliez pas votre serviette, maillot de bain, crème solaire et un sac étanche pour vos affaires.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte de la Forêt des Pins</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à la chaleur côtière pour une incursion dans les hauteurs d'Haïti, à la Forêt des Pins. Cette région montagneuse offre un contraste saisissant avec le littoral, avec ses forêts de pins et son climat plus frais. C'est une opportunité de découvrir une facette différente de la géographie haïtienne et de profiter de paysages verdoyants. Une bouffée d'air frais et de nature vous attend.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Excursion vers la Forêt des Pins</strong>: Un trajet pittoresque vous mènera vers cette région montagneuse, offrant des vues imprenables sur les paysages haïtiens.</li><li>🌲 <strong>Randonnée en forêt</strong>: Profitez d'une marche revigorante à travers les pins, appréciant l'air frais et la tranquillité de la nature.</li><li>☕ <strong>Pause café local</strong>: Dégustez un café haïtien fraîchement moulu dans un petit établissement local, réputé pour sa qualité.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⛰️ Altitude</p>
+                                <p class="text-gray-700">La Forêt des Pins est située en altitude, les températures peuvent y être plus fraîches qu'en bord de mer.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☕ Café haïtien</p>
+                                <p class="text-gray-700">Haïti est producteur de café. Profitez-en pour goûter un café local, souvent biologique et de grande qualité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Artisanat et Culture à Aquin</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, explorez la ville d'Aquin, connue pour son artisanat et son ambiance authentique. C'est une occasion de rencontrer des artisans locaux, de découvrir leurs techniques traditionnelles et de trouver des souvenirs uniques. La ville offre également un aperçu de la vie quotidienne haïtienne, loin des circuits touristiques classiques. Une journée riche en découvertes culturelles et en rencontres humaines.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Visite des ateliers d'artisans</strong>: Rencontrez des artisans locaux et découvrez leur travail, notamment la vannerie, la sculpture sur bois ou la peinture.</li><li>🚶‍♀️ <strong>Exploration du marché d'Aquin</strong>: Flânez dans le marché local pour observer les produits frais et l'animation quotidienne.</li><li>🍽️ <strong>Déjeuner typique haïtien</strong>: Savourez un repas dans un "lakou" (cour) ou un petit restaurant, pour une expérience culinaire authentique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 Soutien local</p>
+                                <p class="text-gray-700">Acheter directement auprès des artisans est un excellent moyen de soutenir l'économie locale.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> bargaining Négociation</p>
+                                <p class="text-gray-700">La négociation est courante sur les marchés, mais toujours avec respect et sourire.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers Moments dans le Sud et Coucher de Soleil</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée complète dans le sud pour revisiter un lieu coup de cœur ou simplement vous imprégner de l'atmosphère. Que ce soit une dernière baignade, une promenade tranquille ou la dégustation d'un plat favori, cette journée est à votre guise. Le soir, un magnifique coucher de soleil sur la mer des Caraïbes offrira un adieu mémorable à cette région authentique d'Haïti. Une journée pour créer des souvenirs durables.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏖️ <strong>Matinée libre à la plage ou au village</strong>: Choisissez de retourner à la plage de Gelée ou de vous promener une dernière fois dans les environs de Courtois.</li><li>🍽️ <strong>Déjeuner d'adieu</strong>: Savourez un dernier repas dans un restaurant local, en appréciant les saveurs haïtiennes.</li><li>🌅 <strong>Coucher de soleil sur la côte</strong>: Trouvez un endroit idéal pour admirer le spectacle du soleil se couchant sur la mer des Caraïbes, un moment magique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Souvenirs</p>
+                                <p class="text-gray-700">Prenez quelques dernières photos pour immortaliser les paysages et les moments vécus.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🙏 Remerciements</p>
+                                <p class="text-gray-700">Un simple "Mèsi anpil" (merci beaucoup) sera très apprécié par les habitants.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers Jacmel, la Cité Créative</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittant le sud, vous prendrez la route vers l'est pour rejoindre Jacmel, une ville côtière réputée pour son architecture coloniale, son art et son carnaval. Ce changement de décor offre une nouvelle perspective sur la diversité d'Haïti. La journée sera consacrée au voyage et à une première immersion dans l'ambiance artistique de Jacmel, une ville pleine de charme et de créativité. Une transition douce avant le départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Voyage vers Jacmel</strong>: Départ de Courtois/Les Cayes pour un trajet d'environ 4-5 heures vers Jacmel, sur la côte sud-est.</li><li>🛏️ <strong>Installation à l'hôtel à Jacmel</strong>: Arrivée et installation dans votre hébergement, un hôtel 3 étoiles au cœur de la ville.</li><li>🚶‍♀️ <strong>Première balade dans le centre historique</strong>: Une promenade légère pour découvrir les rues pavées et les maisons coloniales de Jacmel.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎨 Jacmel, ville d'art</p>
+                                <p class="text-gray-700">Jacmel est classée au patrimoine mondial de l'UNESCO pour son architecture et son dynamisme artistique.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎭 Carnaval</p>
+                                <p class="text-gray-700">Si vous revenez en février, ne manquez pas le célèbre carnaval de Jacmel, réputé pour ses masques et défilés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Jacmel vers Port-au-Prince et Vol Retour</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le dernier jour de votre voyage en Haïti. Après un dernier petit-déjeuner à Jacmel, vous prendrez la route pour Port-au-Prince afin de rejoindre l'aéroport international. Ce trajet sera l'occasion de revoir une dernière fois les paysages haïtiens et de repenser aux merveilleux souvenirs créés. Votre vol retour vous attend, emportant avec vous l'éclat et la richesse de cette île unique. Un départ empreint de nostalgie et de gratitude.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Transfert Jacmel - Port-au-Prince</strong>: Un trajet d'environ 2-3 heures vous mènera de Jacmel à l'aéroport international Toussaint Louverture (PAP).</li><li>✈️ <strong>Formalités d'enregistrement</strong>: Enregistrement pour votre vol retour et passage des contrôles de sécurité.</li><li>🛫 <strong>Vol retour</strong>: Départ de Port-au-Prince, marquant la fin de votre aventure haïtienne.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Courtois-haiti-3hv55087y80w69p/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Timing</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le trajet vers l'aéroport et les formalités, surtout en cas de trafic.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛂 Documents</p>
+                                <p class="text-gray-700">Assurez-vous d'avoir votre passeport et vos documents de vol à portée de main.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>€750/pers (Vol aller-retour Martin, États-Unis - Port-au-Prince en classe économique)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>€520/pers (Transferts aéroport, location de voiture avec chauffeur ou transports locaux inter-villes)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>€455/pers (Repas dans des restaurants locaux et marchés, budget moyen pour 13 jours)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>€1020/pers (12 nuits en hôtels 3 étoiles, base chambre double)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>€390/pers (Entrées aux sites, excursions guidées, traversée Île-à-Vache)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de Décembre à Mars.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👥 La population haïtienne est majoritairement jeune et très résiliente. Le créole haïtien est la langue nationale, le français est aussi parlé.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🇭🇹 Haïti est le premier pays indépendant d'Amérique latine et des Caraïbes, et la seule nation issue d'une révolte d'esclaves réussie.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚌 Le "tap-tap" est un moyen de transport public coloré et emblématique d'Haïti, souvent décoré d'œuvres d'art religieuses ou populaires.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">✨ Le vaudou est une religion officielle en Haïti, pratiquée par une partie de la population, et fait partie intégrante de la culture et de l'identité haïtienne.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Courtois-haiti-3hv55087y80w69p/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://haititourisme.gouv.ht/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Ministère du Tourisme d'Haïti</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/ht/haiti-weather" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ AccuWeather Haïti</strong></a></li>
+                    
+                        <li><a href="https://fr.wikipedia.org/wiki/Ha%C3%AFti" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌐 Wikipédia Haïti</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
